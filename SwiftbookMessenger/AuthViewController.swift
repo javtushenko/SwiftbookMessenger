@@ -11,13 +11,13 @@ class AuthViewController: UIViewController {
     
     let logoImageView = UIImageView(image: UIImage(named: "Logo"), contentMode: .scaleAspectFit)
     
-    let googleLabel = UILabel(text: "Начать с помощью:")
-    let emailLabel = UILabel(text: "Или зарегистрироваться через:")
+    let googleLabel = UILabel(text: "Войти с помощью:")
+    let emailLabel = UILabel(text: "Или зарегистрироваться с:")
     let alreadyOnBoardLabel = UILabel(text: "Уже зарегистрированы?")
     
     let googleButton = UIButton(isShadow: true, titleColor: .black, title: "Google", backgroundcolor: .white)
     let emailButton = UIButton(titleColor: .white, title: "Email", backgroundcolor: UIColor.buttonBlack())
-    let loginButton = UIButton(isShadow: true, titleColor: .buttonRed(), title: "Login", backgroundcolor: .white)
+    let loginButton = UIButton(isShadow: true, titleColor: .buttonRed(), title: "Войти", backgroundcolor: .white)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +26,12 @@ class AuthViewController: UIViewController {
         setupConstrains()
     }
 
+}
+
+
+//MARK: Setup constarints
+extension AuthViewController {
+    
     private func setupConstrains() {
         let googleView = ButtonFormView(label: googleLabel, button: googleButton)
         let emailView = ButtonFormView(label: emailLabel, button: emailButton)
@@ -50,9 +56,6 @@ class AuthViewController: UIViewController {
         ])
     }
 }
-
-
-
 
 
 //MARK: SwiftUI

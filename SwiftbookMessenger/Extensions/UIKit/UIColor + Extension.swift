@@ -38,4 +38,8 @@ extension UIColor {
     static func mainWhite() -> UIColor {
         return UIColor(rgb: 0xF7F8FD)
     }
+    
+    static func textFieldLight() -> UIColor {
+        return UIColor(rgb: 0xE6E6E6)
+    }
 }
