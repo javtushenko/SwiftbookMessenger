@@ -30,7 +30,7 @@ class AuthViewController: UIViewController {
 }
 
 
-//MARK: Setup constarints
+//MARK: - Setup constarints
 extension AuthViewController {
     
     private func setupConstrains() {
@@ -59,7 +59,7 @@ extension AuthViewController {
 }
 
 
-//MARK: SwiftUI
+//MARK: - SwiftUI
 import SwiftUI
 
 struct AuthViewControllerProvider: PreviewProvider {
