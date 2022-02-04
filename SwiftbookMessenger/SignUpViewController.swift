@@ -33,6 +33,7 @@ class SignUpViewController: UIViewController {
         view.backgroundColor = .white
     
         setupConstraints()
+        
     }
     
 }
