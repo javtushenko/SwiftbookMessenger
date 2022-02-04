@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		F320FD9627ABD5C7007A379C /* SetupProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F320FD9527ABD5C7007A379C /* SetupProfileViewController.swift */; };
 		F320FD9827AD3BB4007A379C /* AddPhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F320FD9727AD3BB4007A379C /* AddPhotoView.swift */; };
+		F320FD9A27AD4577007A379C /* UISegmentedControl + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F320FD9927AD4576007A379C /* UISegmentedControl + Extension.swift */; };
 		F34B674327AA673A0075F2E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34B674227AA673A0075F2E6 /* AppDelegate.swift */; };
 		F34B674527AA673A0075F2E6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34B674427AA673A0075F2E6 /* SceneDelegate.swift */; };
 		F34B674727AA673A0075F2E6 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34B674627AA673A0075F2E6 /* AuthViewController.swift */; };
@@ -29,6 +30,7 @@
 /* Begin PBXFileReference section */
 		F320FD9527ABD5C7007A379C /* SetupProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupProfileViewController.swift; sourceTree = "<group>"; };
 		F320FD9727AD3BB4007A379C /* AddPhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhotoView.swift; sourceTree = "<group>"; };
+		F320FD9927AD4576007A379C /* UISegmentedControl + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISegmentedControl + Extension.swift"; sourceTree = "<group>"; };
 		F34B673F27AA673A0075F2E6 /* SwiftbookMessenger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftbookMessenger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F34B674227AA673A0075F2E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F34B674427AA673A0075F2E6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 				F34B675827AA7A2E0075F2E6 /* UIFont + Extension.swift */,
 				F34B675627AA76F80075F2E6 /* UIButton + Extension.swift */,
 				F34B676527AA924E0075F2E6 /* StackView + Extension.swift */,
+				F320FD9927AD4576007A379C /* UISegmentedControl + Extension.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -188,6 +191,7 @@
 			files = (
 				F34B676A27AAA6C50075F2E6 /* OneLineTextField.swift in Sources */,
 				F34B676827AA98C50075F2E6 /* SignUpViewController.swift in Sources */,
+				F320FD9A27AD4577007A379C /* UISegmentedControl + Extension.swift in Sources */,
 				F34B675927AA7A2E0075F2E6 /* UIFont + Extension.swift in Sources */,
 				F34B674727AA673A0075F2E6 /* AuthViewController.swift in Sources */,
 				F320FD9627ABD5C7007A379C /* SetupProfileViewController.swift in Sources */,
