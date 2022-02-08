@@ -7,11 +7,11 @@
 
 import UIKit
 
-struct MChat: Hashable {
+struct MChat: Hashable, Decodable {
     var username: String
-    var userImage: UIImage?
+    var userImageString: String
     var lastMessage: String
-    var id = UUID ()
+    var id: Int
     
     func hash(into hasher: inout Hasher) {
         hasher.combine(id)
@@ -24,12 +24,7 @@ struct MChat: Hashable {
 
 class ListViewController: UIViewController {
     
-    let activeChats: [MChat] = [
-        MChat(username: "Бахрум", userImage: UIImage(named: "human4"), lastMessage: "Привет дай денег"),
-        MChat(username: "Михаил", userImage: UIImage(named: "human2"), lastMessage: "Привет дай денег"),
-        MChat(username: "Иван", userImage: UIImage(named: "human1"), lastMessage: "Привет я сын божий"),
-        MChat(username: "Оксана", userImage: UIImage(named: "human6"), lastMessage: "Привет я страх божий"),
-    ]
+    let activeChats = Bundle.main.decode([MChat].self, from: "activeChats.json" )
     
     enum Section: Int, CaseIterable {
         case activeChats
