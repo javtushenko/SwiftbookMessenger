@@ -7,18 +7,46 @@
 
 import UIKit
 
+struct MChat: Hashable {
+    var username: String
+    var userImage: UIImage?
+    var lastMessage: String
+    var id = UUID ()
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
+    
+    static func == (lhs: MChat, rhs: MChat) -> Bool {
+        return lhs.id == rhs.id
+    }
+}
+
 class ListViewController: UIViewController {
     
+    let activeChats: [MChat] = [
+        MChat(username: "Бахрум", userImage: UIImage(named: "human4"), lastMessage: "Привет дай денег"),
+        MChat(username: "Михаил", userImage: UIImage(named: "human2"), lastMessage: "Привет дай денег"),
+        MChat(username: "Иван", userImage: UIImage(named: "human1"), lastMessage: "Привет я сын божий"),
+        MChat(username: "Оксана", userImage: UIImage(named: "human6"), lastMessage: "Привет я страх божий"),
+    ]
+    
+    enum Section: Int, CaseIterable {
+        case activeChats
+    }
+    
     var collectionView: UICollectionView!
+    var dataSourse: UICollectionViewDiffableDataSource<Section, MChat>?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .mainWhite()
         
         setupSearchBar()
+        
         setupCollectionView()
-        collectionView.dataSource = self
-        collectionView.delegate = self
+        createDataSourse()
+        reloadData()
     }
     
     private func setupCollectionView() {
@@ -49,28 +77,28 @@ class ListViewController: UIViewController {
         }
         return layout
     }
-}
-
-
-//MARK: - CollectionView DataSourse
-extension ListViewController: UICollectionViewDataSource {
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+    private func createDataSourse() {
+        dataSourse = UICollectionViewDiffableDataSource<Section,MChat>(collectionView: collectionView,
+                                                                       cellProvider: { (collectionView, indexPath, chat)
+            -> UICollectionViewCell in
+            
+            guard let section = Section(rawValue: indexPath.section) else { fatalError("Uncnown section") }
+            switch section {
+            case .activeChats:
+                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath )
+                cell.backgroundColor = .systemBlue
+                return cell
+            }
+        })
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
-        cell.backgroundColor = .red
-        cell.layer.borderWidth = 1
-        return cell
+    private func reloadData() {
+        var snapshot = NSDiffableDataSourceSnapshot<Section,MChat>()
+        snapshot.appendSections([.activeChats])
+        snapshot.appendItems(activeChats, toSection: .activeChats)
+        dataSourse?.apply(snapshot, animatingDifferences: true)
     }
-}
-
-
-//MARK: - CollectionView Delegate
-extension ListViewController: UICollectionViewDelegate {
-    
 }
 
 
