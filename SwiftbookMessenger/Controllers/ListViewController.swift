@@ -28,7 +28,7 @@ class ListViewController: UIViewController {
     let waitingChats = Bundle.main.decode([MChat].self, from: "waitingChats.json" )
     
     enum Section: Int, CaseIterable {
-        case activeChats, waitingChats
+        case waitingChats, activeChats
     }
     
     var collectionView: UICollectionView!
@@ -48,9 +48,10 @@ class ListViewController: UIViewController {
     private func setupCollectionView() {
         collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: createCompositionalLayout())
         collectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        collectionView.backgroundColor = .white
+        collectionView.backgroundColor = .mainWhite()
         view.addSubview(collectionView)
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cell")
+        collectionView.register(ActiveChatCell.self, forCellWithReuseIdentifier: ActiveChatCell.reuseId)
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cell2")
     }
     
@@ -68,6 +69,20 @@ class ListViewController: UIViewController {
 //MARK: - Data Sourse
 extension ListViewController {
     
+    private func configure<T: SellConfiguringCell>(cellType: T.Type,
+                                                   with value: MChat,
+                                                   indexPath: IndexPath) -> T {
+        
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellType.reuseId,
+                                                            for: indexPath) as? T
+        else {
+            fatalError("Unable to dequere \(cellType)")
+        }
+        
+        cell.configure(with: value)
+        return cell
+    }
+    
     private func createDataSourse() {
         dataSourse = UICollectionViewDiffableDataSource<Section,MChat>(collectionView: collectionView,
                                                                        cellProvider: { (collectionView, indexPath, chat)
@@ -80,9 +95,7 @@ extension ListViewController {
                 cell.backgroundColor = .systemBlue
                 return cell
             case .activeChats:
-                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell2", for: indexPath )
-                cell.backgroundColor = .systemRed
-                return cell
+                return self.configure(cellType: ActiveChatCell.self, with: chat, indexPath: indexPath)
             }
         })
     }
@@ -98,9 +111,9 @@ extension ListViewController {
             
             guard let section = Section(rawValue: sectionIndex) else { fatalError("Uncnown section") }
             switch section {
-            case .activeChats:
-                return self.createWaitingChats()
             case .waitingChats:
+                return self.createWaitingChats()
+            case .activeChats:
                 return self.createActiveChats()
             }
         }

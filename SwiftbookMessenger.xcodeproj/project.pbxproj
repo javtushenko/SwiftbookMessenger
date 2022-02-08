@@ -16,6 +16,7 @@
 		F320FDEC27B25D7C007A379C /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F320FDEB27B25D7C007A379C /* Bundle-Decodable.swift */; };
 		F320FDEF27B25DEE007A379C /* waitingChats.json in Resources */ = {isa = PBXBuildFile; fileRef = F320FDED27B25DEE007A379C /* waitingChats.json */; };
 		F320FDF027B25DEE007A379C /* activeChats.json in Resources */ = {isa = PBXBuildFile; fileRef = F320FDEE27B25DEE007A379C /* activeChats.json */; };
+		F320FDF327B27724007A379C /* ActiveChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F320FDF227B27724007A379C /* ActiveChatCell.swift */; };
 		F34B674327AA673A0075F2E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34B674227AA673A0075F2E6 /* AppDelegate.swift */; };
 		F34B674527AA673A0075F2E6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34B674427AA673A0075F2E6 /* SceneDelegate.swift */; };
 		F34B674727AA673A0075F2E6 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34B674627AA673A0075F2E6 /* AuthViewController.swift */; };
@@ -43,6 +44,7 @@
 		F320FDEB27B25D7C007A379C /* Bundle-Decodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
 		F320FDED27B25DEE007A379C /* waitingChats.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = waitingChats.json; sourceTree = "<group>"; };
 		F320FDEE27B25DEE007A379C /* activeChats.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = activeChats.json; sourceTree = "<group>"; };
+		F320FDF227B27724007A379C /* ActiveChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveChatCell.swift; sourceTree = "<group>"; };
 		F34B673F27AA673A0075F2E6 /* SwiftbookMessenger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftbookMessenger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F34B674227AA673A0075F2E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F34B674427AA673A0075F2E6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -87,11 +89,20 @@
 		F320FD9E27AD5273007A379C /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				F320FDF127B27704007A379C /* Cell */,
 				F320FD9C27AD526F007A379C /* ListViewController.swift */,
 				F320FDA127AD53E5007A379C /* PeopleViewController.swift */,
 				F320FD9F27AD52B4007A379C /* MainTabBarController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		F320FDF127B27704007A379C /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F320FDF227B27724007A379C /* ActiveChatCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		F34B673627AA673A0075F2E6 = {
@@ -229,6 +240,7 @@
 				F34B676A27AAA6C50075F2E6 /* OneLineTextField.swift in Sources */,
 				F34B676827AA98C50075F2E6 /* SignUpViewController.swift in Sources */,
 				F320FD9A27AD4577007A379C /* UISegmentedControl + Extension.swift in Sources */,
+				F320FDF327B27724007A379C /* ActiveChatCell.swift in Sources */,
 				F34B675927AA7A2E0075F2E6 /* UIFont + Extension.swift in Sources */,
 				F320FDA227AD53E5007A379C /* PeopleViewController.swift in Sources */,
 				F34B674727AA673A0075F2E6 /* AuthViewController.swift in Sources */,
