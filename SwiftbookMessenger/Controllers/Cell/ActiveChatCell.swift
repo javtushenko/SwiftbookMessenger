@@ -7,11 +7,6 @@
 
 import UIKit
 
-protocol SellConfiguringCell {
-    static var reuseId: String { get }
-    func configure(with value: MChat)
-}
-
 class ActiveChatCell: UICollectionViewCell, SellConfiguringCell {
     
     static var reuseId = "ActiveChatCell"

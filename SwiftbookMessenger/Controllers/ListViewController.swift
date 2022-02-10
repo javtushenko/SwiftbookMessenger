@@ -50,9 +50,9 @@ class ListViewController: UIViewController {
         collectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         collectionView.backgroundColor = .mainWhite()
         view.addSubview(collectionView)
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cell")
+        collectionView.register(<#T##nib: UINib?##UINib?#>, forSupplementaryViewOfKind: <#T##String#>, withReuseIdentifier: <#T##String#>)
         collectionView.register(ActiveChatCell.self, forCellWithReuseIdentifier: ActiveChatCell.reuseId)
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cell2")
+        collectionView.register(WaitingChatCell.self, forCellWithReuseIdentifier: WaitingChatCell.reuseId)
     }
     
     private func reloadData() {
@@ -91,9 +91,7 @@ extension ListViewController {
             guard let section = Section(rawValue: indexPath.section) else { fatalError("Uncnown section") }
             switch section {
             case .waitingChats:
-                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath )
-                cell.backgroundColor = .systemBlue
-                return cell
+                return self.configure(cellType: WaitingChatCell.self, with: chat, indexPath: indexPath)
             case .activeChats:
                 return self.configure(cellType: ActiveChatCell.self, with: chat, indexPath: indexPath)
             }
