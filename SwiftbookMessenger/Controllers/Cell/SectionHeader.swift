@@ -18,6 +18,19 @@ class SectionHeader: UICollectionReusableView {
         
         title.translatesAutoresizingMaskIntoConstraints = false
         addSubview(title)
+        
+        NSLayoutConstraint.activate([
+            title.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            title.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            title.topAnchor.constraint(equalTo: self.topAnchor),
+            title.bottomAnchor.constraint(equalTo: self.bottomAnchor)
+        ])
+    }
+    
+    func configure(text: String, font: UIFont?, color: UIColor) {
+        title.textColor = color
+        title.font = font
+        title.text = text
     }
     
     required init?(coder: NSCoder) {

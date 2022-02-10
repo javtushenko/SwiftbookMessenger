@@ -42,4 +42,8 @@ extension UIColor {
     static func textFieldLight() -> UIColor {
         return UIColor(rgb: 0xE6E6E6)
     }
+    
+    static func titleCell() -> UIColor {
+        return UIColor(rgb: 0x929292)
+    }
 }
