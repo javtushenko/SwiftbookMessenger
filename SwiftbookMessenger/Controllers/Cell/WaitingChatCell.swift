@@ -8,7 +8,7 @@
 import UIKit
 
 class WaitingChatCell: UICollectionViewCell, SellConfiguringCell {
-    
+
     static var reuseId = "WaitingChatCell"
     
     let friendImageView = UIImageView()
@@ -25,10 +25,10 @@ class WaitingChatCell: UICollectionViewCell, SellConfiguringCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func configure(with value: MChat) {
-        friendImageView.image = UIImage(named: value.userImageString)
+    func configure<U>(with value: U) {
+        guard let source = value as? MChat else { return }
+        friendImageView.image = UIImage(named: source.userImageString )
     }
-    
 }
 
 

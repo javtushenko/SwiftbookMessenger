@@ -32,10 +32,11 @@ class ActiveChatCell: UICollectionViewCell, SellConfiguringCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func configure(with value: MChat) {
-        friendImageView.image = UIImage(named: value.userImageString)
-        friendName.text = value.username
-        lastMessage.text = value.lastMessage
+    func configure<U>(with value: U) {
+        guard let source = value as? MChat else { return }
+        friendImageView.image = UIImage(named: source.userImageString)
+        friendName.text = source.username
+        lastMessage.text = source.lastMessage
     }
 }
 

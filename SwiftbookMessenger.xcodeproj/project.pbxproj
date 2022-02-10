@@ -39,6 +39,8 @@
 		F37755F827B5385D008BBB63 /* users.json in Resources */ = {isa = PBXBuildFile; fileRef = F37755F727B5385D008BBB63 /* users.json */; };
 		F37755FB27B539A9008BBB63 /* MUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37755FA27B539A9008BBB63 /* MUser.swift */; };
 		F37755FD27B539CB008BBB63 /* MChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37755FC27B539CB008BBB63 /* MChat.swift */; };
+		F377560027B5454F008BBB63 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37755FF27B5454F008BBB63 /* UserCell.swift */; };
+		F377560227B54FB8008BBB63 /* UIViewController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F377560127B54FB8008BBB63 /* UIViewController + Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +78,8 @@
 		F37755F727B5385D008BBB63 /* users.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = users.json; sourceTree = "<group>"; };
 		F37755FA27B539A9008BBB63 /* MUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MUser.swift; sourceTree = "<group>"; };
 		F37755FC27B539CB008BBB63 /* MChat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MChat.swift; sourceTree = "<group>"; };
+		F37755FF27B5454F008BBB63 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		F377560127B54FB8008BBB63 /* UIViewController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +121,7 @@
 			children = (
 				F320FDF227B27724007A379C /* ActiveChatCell.swift */,
 				F37755F027B52778008BBB63 /* WaitingChatCell.swift */,
+				F37755FF27B5454F008BBB63 /* UserCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -167,6 +172,7 @@
 				F34B675627AA76F80075F2E6 /* UIButton + Extension.swift */,
 				F34B676527AA924E0075F2E6 /* StackView + Extension.swift */,
 				F320FD9927AD4576007A379C /* UISegmentedControl + Extension.swift */,
+				F377560127B54FB8008BBB63 /* UIViewController + Extension.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -302,6 +308,8 @@
 				F34B675D27AA7E6B0075F2E6 /* UILabel + Extension.swift in Sources */,
 				F34B675F27AA86C70075F2E6 /* UIImageView + Extension.swift in Sources */,
 				F34B675B27AA7AF10075F2E6 /* UIColor + Extension.swift in Sources */,
+				F377560027B5454F008BBB63 /* UserCell.swift in Sources */,
+				F377560227B54FB8008BBB63 /* UIViewController + Extension.swift in Sources */,
 				F37755F127B52778008BBB63 /* WaitingChatCell.swift in Sources */,
 				F34B674527AA673A0075F2E6 /* SceneDelegate.swift in Sources */,
 				F320FDA027AD52B4007A379C /* MainTabBarController.swift in Sources */,
