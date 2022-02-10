@@ -19,7 +19,10 @@ class ActiveChatCell: UICollectionViewCell, SellConfiguringCell {
     let friendImageView = UIImageView()
     let friendName = UILabel(text: "User Name", font: .laoSangamMN20())
     let lastMessage = UILabel(text: "How are you?", font: .laoSangamMN18())
-    let gradientView = UIView()
+    let gradientView = GradientView(from: .topTrailing,
+                                    to: .bottomLeading,
+                                    startColor: UIColor(rgb: 0xC9A1F0),
+                                    endColor: UIColor(rgb: 0x7AB2EB))
       
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -28,7 +31,6 @@ class ActiveChatCell: UICollectionViewCell, SellConfiguringCell {
         self.layer.cornerRadius = 4
         self.clipsToBounds = true
         self.backgroundColor = .white
-        gradientView.backgroundColor = .black
     }
     
     required init?(coder: NSCoder) {

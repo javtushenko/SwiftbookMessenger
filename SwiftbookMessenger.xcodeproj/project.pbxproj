@@ -32,6 +32,7 @@
 		F34B676827AA98C50075F2E6 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34B676727AA98C50075F2E6 /* SignUpViewController.swift */; };
 		F34B676A27AAA6C50075F2E6 /* OneLineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34B676927AAA6C50075F2E6 /* OneLineTextField.swift */; };
 		F34B676C27AAAEF90075F2E6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34B676B27AAAEF90075F2E6 /* LoginViewController.swift */; };
+		F37755EF27B521B4008BBB63 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37755EE27B521B4008BBB63 /* GradientView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,7 @@
 		F34B676727AA98C50075F2E6 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		F34B676927AAA6C50075F2E6 /* OneLineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneLineTextField.swift; sourceTree = "<group>"; };
 		F34B676B27AAAEF90075F2E6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		F37755EE27B521B4008BBB63 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +161,7 @@
 				F34B676327AA89570075F2E6 /* ButtonFormView.swift */,
 				F34B676927AAA6C50075F2E6 /* OneLineTextField.swift */,
 				F320FD9727AD3BB4007A379C /* AddPhotoView.swift */,
+				F37755EE27B521B4008BBB63 /* GradientView.swift */,
 				F34B676127AA880C0075F2E6 /* UIKit */,
 			);
 			path = Extensions;
@@ -238,6 +241,7 @@
 			files = (
 				F320FD9D27AD526F007A379C /* ListViewController.swift in Sources */,
 				F34B676A27AAA6C50075F2E6 /* OneLineTextField.swift in Sources */,
+				F37755EF27B521B4008BBB63 /* GradientView.swift in Sources */,
 				F34B676827AA98C50075F2E6 /* SignUpViewController.swift in Sources */,
 				F320FD9A27AD4577007A379C /* UISegmentedControl + Extension.swift in Sources */,
 				F320FDF327B27724007A379C /* ActiveChatCell.swift in Sources */,
