@@ -58,6 +58,7 @@ class InsertableTextField: UITextField {
     private func customizeLeftView() {
         let image = UIImage(systemName: "smiley")
         let imageView = UIImageView(image: image)
+        imageView.setupColor(color: .lightGray)
         leftView = imageView
         leftView?.frame = CGRect(x: 0, y: 0, width: 19, height: 19)
         leftViewMode = .always

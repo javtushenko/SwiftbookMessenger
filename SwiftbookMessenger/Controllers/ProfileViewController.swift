@@ -11,8 +11,8 @@ class ProfileViewController: UIViewController {
     
     let containerView = UIView()
     let imageView = UIImageView(image: UIImage(named: "human3"), contentMode: .scaleAspectFill)
-    let nameLabel = UILabel(text: "Оксана Страх-Божий", font: .systemFont(ofSize: 20, weight: .light))
-    let aboutMeLabel = UILabel(text: "Обо мне: венчалась на Иване Сыне-Божьем", font: .systemFont(ofSize: 16, weight: .light))
+    let nameLabel = UILabel(text: "Оксана", font: .systemFont(ofSize: 20, weight: .light))
+    let aboutMeLabel = UILabel(text: "Обо мне: венчалась на Иване", font: .systemFont(ofSize: 16, weight: .light))
     let myTextField = InsertableTextField()
     
     override func viewDidLoad() {
@@ -32,7 +32,16 @@ class ProfileViewController: UIViewController {
         aboutMeLabel.numberOfLines = 0
         containerView.backgroundColor = .mainWhite()
         containerView.layer.cornerRadius = 30
+        
+        if let button = myTextField.rightView as? UIButton {
+            button.addTarget(self, action: #selector(sendMessage), for: .touchUpInside)
+        }
     }
+    
+    @objc private func sendMessage() {
+        print(#function)
+    }
+    
 }
 
 
