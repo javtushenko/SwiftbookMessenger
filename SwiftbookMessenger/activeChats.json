@@ -2,31 +2,31 @@
     {
         "username": "Bob River",
         "userImageString": "human1",
-        "lastMessage": "How are you?",
+        "lastMessage": "Кто ты?",
         "id": 1
     },
     {
-        "username": "John Black",
+        "username": "Иван",
         "userImageString": "human2",
-        "lastMessage": "Where are you?",
+        "lastMessage": "Как дела?",
         "id": 2
     },
     {
-        "username": "Сын божий Иван",
+        "username": "Оксана",
         "userImageString": "human3",
-        "lastMessage": "Who are you?",
+        "lastMessage": "Кто ты?",
         "id": 3
     },
     {
-        "username": "Страх божий Оксана",
+        "username": "Ричард",
         "userImageString": "human7",
-        "lastMessage": "How old are you?",
+        "lastMessage": "Сколько тебе лет?",
         "id": 4
     },
     {
-        "username": "Robert Martin",
+        "username": "Роберт",
         "userImageString": "human5",
-        "lastMessage": "Where are we?",
+        "lastMessage": "Где ты?",
         "id": 5
     }
 ]
