@@ -42,6 +42,8 @@
 		F377560027B5454F008BBB63 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37755FF27B5454F008BBB63 /* UserCell.swift */; };
 		F377560227B54FB8008BBB63 /* UIViewController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F377560127B54FB8008BBB63 /* UIViewController + Extension.swift */; };
 		F377560427B63D19008BBB63 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F377560327B63D19008BBB63 /* ProfileViewController.swift */; };
+		F377560627B65604008BBB63 /* InsertableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F377560527B65604008BBB63 /* InsertableTextField.swift */; };
+		F377560827B65A69008BBB63 /* UIView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F377560727B65A69008BBB63 /* UIView + Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +84,8 @@
 		F37755FF27B5454F008BBB63 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		F377560127B54FB8008BBB63 /* UIViewController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extension.swift"; sourceTree = "<group>"; };
 		F377560327B63D19008BBB63 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		F377560527B65604008BBB63 /* InsertableTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertableTextField.swift; sourceTree = "<group>"; };
+		F377560727B65A69008BBB63 /* UIView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +180,7 @@
 				F34B676527AA924E0075F2E6 /* StackView + Extension.swift */,
 				F320FD9927AD4576007A379C /* UISegmentedControl + Extension.swift */,
 				F377560127B54FB8008BBB63 /* UIViewController + Extension.swift */,
+				F377560727B65A69008BBB63 /* UIView + Extension.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -183,6 +188,7 @@
 		F34B676227AA881B0075F2E6 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				F377560527B65604008BBB63 /* InsertableTextField.swift */,
 				F320FDEB27B25D7C007A379C /* Bundle-Decodable.swift */,
 				F34B676327AA89570075F2E6 /* ButtonFormView.swift */,
 				F34B676927AAA6C50075F2E6 /* OneLineTextField.swift */,
@@ -301,6 +307,7 @@
 				F37755FB27B539A9008BBB63 /* MUser.swift in Sources */,
 				F320FDF327B27724007A379C /* ActiveChatCell.swift in Sources */,
 				F34B675927AA7A2E0075F2E6 /* UIFont + Extension.swift in Sources */,
+				F377560627B65604008BBB63 /* InsertableTextField.swift in Sources */,
 				F320FDA227AD53E5007A379C /* PeopleViewController.swift in Sources */,
 				F34B674727AA673A0075F2E6 /* AuthViewController.swift in Sources */,
 				F377560427B63D19008BBB63 /* ProfileViewController.swift in Sources */,
@@ -310,6 +317,7 @@
 				F34B676427AA89570075F2E6 /* ButtonFormView.swift in Sources */,
 				F320FD9827AD3BB4007A379C /* AddPhotoView.swift in Sources */,
 				F34B675D27AA7E6B0075F2E6 /* UILabel + Extension.swift in Sources */,
+				F377560827B65A69008BBB63 /* UIView + Extension.swift in Sources */,
 				F34B675F27AA86C70075F2E6 /* UIImageView + Extension.swift in Sources */,
 				F34B675B27AA7AF10075F2E6 /* UIColor + Extension.swift in Sources */,
 				F377560027B5454F008BBB63 /* UserCell.swift in Sources */,
